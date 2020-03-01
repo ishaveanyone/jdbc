@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="tomcatjdbc" />
+        <module name="hikaricp" />
+        <module name="C3p0" />
+        <module name="gendbcp" />
+        <module name="jdbc" />
+        <module name="druid" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="C3p0" target="1.5" />
+      <module name="druid" target="6" />
+      <module name="gendbcp" target="1.5" />
+      <module name="hikaricp" target="1.8" />
+      <module name="jdbc" target="1.5" />
+      <module name="tomcatjdbc" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hikaricp" options="-parameters" />
+      <module name="tomcatjdbc" options="-parameters" />
+    </option>
+  </component>
+</project>

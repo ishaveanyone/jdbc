@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/C3p0/C3p0.iml" filepath="$PROJECT_DIR$/C3p0/C3p0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/dbcp.iml" filepath="$PROJECT_DIR$/.idea/dbcp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/druid/druid.iml" filepath="$PROJECT_DIR$/druid/druid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gendbcp/gendbcp.iml" filepath="$PROJECT_DIR$/gendbcp/gendbcp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hikaricp/hikaricp.iml" filepath="$PROJECT_DIR$/hikaricp/hikaricp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/jdbc/jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomcatjdbc/tomcatjdbc.iml" filepath="$PROJECT_DIR$/tomcatjdbc/tomcatjdbc.iml" />
+    </modules>
+  </component>
+</project>

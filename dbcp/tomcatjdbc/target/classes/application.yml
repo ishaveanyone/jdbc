@@ -1,0 +1,29 @@
+#  https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html 官方文档
+server:
+  port: 8666
+  servlet:
+    context-path: /web
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/xuppdb?currentSchema=public
+    username: xupp
+    password: pass
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    tomcat:
+      max-active: 100 #(Int)可同时从此池分配的活动连接的最大数量。默认值是100
+      initial-size: 15 # (Int)启动池时创建的连接的初始数量。默认值是10
+      max-wait: 20000 #(Int)池在抛出异常之前等待返回连接的最大毫秒数(当没有可用连接时)。默认值是30000(30秒)
+      max-idle: 15 #(Int)在任何时候都应保持在池中的最大连接数。默认值是maxActive:100定期检查空闲连接(如果启用的话)，并检查空闲时间超过minEvictableIdleTimeMillis将被释放。(另见testWhileIdle)
+      min-idle: 8 #(Int)在任何时候都应保持在池中的已建立连接的最低数目。如果验证查询失败，连接池可缩小到此数字以下。默认值派生自initialSize:10(另见testWhileIdle)
+      default-auto-commit: true # 是否自动提交事务
+      init-s-q-l: select version(); #校验数据
+      driver-class-name: org.postgresql.Driver
+      validation-interval: 1 # 默认3000 在这个频率下面才进行连接验证 避免频繁验证
+      jdbc-interceptors: #灵活和可插拔的拦截器，以创建围绕池、查询执行和结果集处理的任何自定义。更多关于这一点的高级部分
+      fair-queue: true # 将公平标志设置为true，以实现线程公平或使用异步连接检索
+      url: ${spring.datasource.url}
+      username: ${spring.datasource.username}
+      password: ${spring.datasource.password}
+      default-transaction-isolation: 1 # 事务隔离级别 一般都是 设置为 读取到提交数据 这样避免幻读
+  jpa:
+    show-sql: true
